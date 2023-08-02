@@ -38,6 +38,11 @@ fn main() {
                 },
                 is_nullable: column_name.contains("nullable"),
                 attributes: Default::default(),
+                column_name: if column_name == "type" {
+                    "row_type".to_string()
+                } else {
+                    column_name.to_string()
+                },
             }
         }
     }

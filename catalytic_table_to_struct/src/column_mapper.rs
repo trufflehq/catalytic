@@ -101,7 +101,7 @@ pub(crate) fn column_to_property(
         }
 
         let ty: TokenStream = ty.parse().unwrap();
-        let ident = format_ident!("{}", column.column_name);
+        let ident = format_ident!("{}", struct_field.column_name);
         let attributes = field_ts.clone();
 
         field_ts.extend(quote! {

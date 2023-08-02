@@ -15,6 +15,8 @@ pub struct StructField {
     pub is_nullable: bool,
     /// The attributes that needs to be placed on the property
     pub attributes: TokenStream,
+    /// The column name
+    pub column_name: String,
 }
 
 pub const DEFAULT_DERIVES: [&str; 3] = ["Debug", "Clone", "PartialEq"];
@@ -89,6 +91,7 @@ pub trait Transformer {
             json: None,
             is_nullable: false,
             attributes: Default::default(),
+            column_name: _column_name.to_string(),
         }
     }
 
