@@ -229,7 +229,10 @@ fn add_random_value(
         ColumnType::Double => into!(f64::MAX),
         ColumnType::Uuid => {
             into!(uuid::Uuid::parse_str("3866a82f-f37c-446c-8838-fb6686c3acf2").unwrap())
-        }
+        },
+        ColumnType::TimeUuid => {
+            into!(uuid::Uuid::parse_str("3866a82f-f37c-446c-8838-fb6686c3acf2").unwrap())
+        },
         ColumnType::Custom(_) => {
             panic!("https://github.com/scylladb/scylla-rust-driver/issues/104")
         }
