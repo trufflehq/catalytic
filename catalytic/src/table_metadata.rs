@@ -77,6 +77,7 @@ pub enum ColumnType {
     Float,
     Double,
     Uuid,
+    TimeUuid,
     Counter,
     Custom(String),
 }
@@ -99,6 +100,7 @@ impl ColumnType {
             "float" => ColumnType::Float,
             "double" => ColumnType::Double,
             "uuid" => ColumnType::Uuid,
+            "timeuuid" => ColumnType::TimeUuid,
             "counter" => ColumnType::Counter,
             _ => ColumnType::Custom(s),
         }
@@ -118,6 +120,7 @@ impl ColumnType {
             ColumnType::Float => "f32",
             ColumnType::Double => "f64",
             ColumnType::Uuid => "uuid::Uuid",
+            ColumnType::TimeUuid => "uuid::Uuid",
             ColumnType::Custom(c) => c.as_str(),
         };
 
