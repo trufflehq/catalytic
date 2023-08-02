@@ -1,7 +1,0 @@
-error: proc macro panicked
- --> src/non_compiling_code/non_existing_column.rs
-  |
-  |     query!("select * from test_table where b = ? and c = 2 and f = 2", a);
-  |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  |
-  = help: message: Illegal column: f

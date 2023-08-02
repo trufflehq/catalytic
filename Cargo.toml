@@ -2,7 +2,6 @@
 members = [
     "catalytic",
     "catalytic_table_to_struct",
-    "catalytic_table_to_struct/example",
     "catalytic_macro",
     "catalytic_query_parser",
 ]
